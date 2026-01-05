@@ -1,5 +1,17 @@
 #!/bin/bash
 
+focus_scrcpy() {
+    # Obtener el workspace donde está scrcpy
+    workspace=$(hyprctl clients -j | jq -r '.[] | select(.class=="scrcpy") | .workspace.id')
+    
+    if [ -n "$workspace" ]; then
+        hyprctl dispatch workspace "$workspace"
+        sleep 0.1  # Pequeña pausa para asegurar el cambio
+    fi
+}
+
+focus_scrcpy
+
 case "$1" in
     whatsapp)
         adb shell am start -n com.whatsapp/.HomeActivity
