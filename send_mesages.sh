@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Configuración
+# Nota: envia imágenes y video al número de Whatsapp especificado
 PHONE_NUMBER="570000000000" 
 FILE_PATH="$1"
 
