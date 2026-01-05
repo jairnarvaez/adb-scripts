@@ -28,6 +28,9 @@ case "$1" in
     buffer)
     	adb shell am start -a android.intent.action.VIEW -d "content://com.android.externalstorage.documents/document/primary:Buffer"
     	;;
+    home|minimize)
+         adb shell input keyevent KEYCODE_HOME
+         ;;
     *)
         echo "App no reconocida"
         ;;
