@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuración
-PHONE_NUMBER="570000000000" 
+PHONE_NUMBER="573184512198"  #Numero de ejemplo
 FILE_PATH="$1"
 
 if [ -z "$FILE_PATH" ]; then

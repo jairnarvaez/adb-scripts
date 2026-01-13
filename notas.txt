@@ -1,0 +1,2 @@
+# Desabilitar el launcher por defecto
+adb shell pm disable-user --user 0 com.sec.android.app.launcher
